@@ -1,0 +1,2152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>IGGYWORKS MOTORSHOP</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-5.0.2-dist/css/dataTables.bootstrap5.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body >
+	<div class="container-fluid" style="background-color:#282828;">
+		<div class="row">
+			<div class="col-md-12 col-lg-12 col-xs-12">
+
+
+				<!-- LOGO -->
+				<div class="header">
+					<img src="Pictures/Iggyworkslogo.jpg" class="banner-image">
+				</div>
+
+				<!-- navigaton -->
+				<div class="navigation">
+					<ul class="nav">
+						<li class="a"><a class="current " href="index.html" > HOME </a></li>
+						<li class="a"> <a class="current5 " href="aboutus.html"> ABOUT US </a></li>
+						<li class="a"> <a class="current2 " href="product.html"style="background-color:#1c1c1c" > PRODUCT </a></li>
+						<li class="a"><a class="current3 " href="services.html"> SERVICES </a></li>
+						<li class="a"> <a class="current4 " href="contactus.html"> CONTACT US </a></li>
+					</ul>
+					<!-- responsive  for mobile phones and tablets -->
+					<div class="col-lg-12" >
+						<select class="navigation col-lg-12" style="width:100%" onchange="location = this.options[this.selectedIndex].value;"> 			
+							<option value="index.html">HOME</option>
+							<option value="index.html">HOME</option> 
+							<option value="product.html">PRODUCT</option>
+							<option value="services.html">SERVICES</option> 
+							<option value="contactus.html">CONTACT US</option> 
+							<option value="aboutus.html">ABOUT US</option> 	
+						</select> 
+					</div>
+				</div>
+				<br>
+				<!-- Contents -->
+				<div class="Content">
+					<!-- business product -->
+					<div class="row">
+						<!-- Product list -->
+							<div class="col-lg-2">
+								<div class="prodlist" style="width: 100%; ">
+									<ul class="list_prod" style="height: 28rem;">
+										<li class="list"><input class="form-control mr-sm-" type="search" placeholder="Search"aria-label="Search" onkeyup="searprod()" id="searchbar"></li>
+										<li class="list"><button type="button" class="btn btn-secondary col-lg-12"  onclick="alls()">All</button></li>
+										<li class="list"><button type="button" class="btn btn-secondary col-lg-12"  onclick="brake()">Disk Break</button></li>
+										<li class="list"><button type="button" class="btn btn-secondary col-lg-12"  onclick="shocks()">Shock</button></li>
+										<li class="list"><button type="button" class="btn btn-secondary col-lg-12"  onclick="seat()">Seat Cover</button></li>
+										<li class="list"><button type="button" class="btn btn-secondary col-lg-12"  onclick="oils()">Gear, Oil, and Coolant </button></li>
+										<li class="list"><button type="button" class="btn btn-secondary col-lg-12"  onclick="accesss()">Accessories</button></li>
+									</ul>
+								</div>
+							</div>
+						<div class="col-lg-10 ">
+							<!-- product list -->
+							<div class="product"  style="height: 450px;  width: 100%; overflow-x: hidden;" id="myprod" >
+								<div class="card-deck" >
+									<div class="row">
+										<div class="brake col-lg-3 ">
+											<div class="card" >
+												<img src="Pictures/disc/discbrake.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">TDR Disk Brake ₱250.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="shock col-lg-3  ">
+											<div class="card " >
+												<img src="Pictures/shocks/hero rare shock 300mm.jfif"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#HRS" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Hero Rare Shock 300mm ₱1,000.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="oils col-lg-3">
+											<div class="card " >
+												<img src="Pictures/COG/powercoolant.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#coolants" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Power Coolant ₱550.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="seat col-lg-3">
+											<div class="card " >
+												<img src="Pictures/seatcover1.jpg"  height="220px" >
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#jds" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">JDS SeatCovers ₱850.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="oils col-lg-3">
+											<div class="card " >
+												<img src="Pictures/COG/motul.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#motul" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Motul Oil ₱650.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="brake col-lg-3">
+											<div class="card " >
+												<img src="Pictures/disc/brembo_super_brake_rortors.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#BSBR" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Brembo Super Brake Rotors ₱3250.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="brake col-lg-3">
+											<div class="card " >
+												<img src="Pictures/disc/brembo.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#BDB" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Brembo Disc Brake ₱11250.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="brake col-lg-3">
+											<div class="card " >
+												<img src="Pictures/disc/honda.jfif"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#HDB" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Honda Disk Brake ₱3650.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="brake col-lg-3">
+											<div class="card " >
+												<img src="Pictures/disc/RGS.jfif"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#RDB" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">RGS Disk Brake ₱1250.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="brake col-lg-3">
+											<div class="card" >
+												<img src="Pictures/disc/rotordiscbrake yamaha.jfif"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#RYDB" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Rotor Yamaha Disk Brake ₱250.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="brake col-lg-3 col-md-12">
+											<div class="card " >
+												<img src="Pictures/disc/yamaha.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#YDB" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Yamaha Disk Brake ₱2050.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="brake col-lg-3 col-md-12">
+											<div class="card " >
+												<img src="Pictures/disc/yamaha_aerox.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#YADB" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Yamaha Aerox Disk Brake ₱1250.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="seat col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/seatcover/jrp.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#JRP" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">JRP Seatcover ₱590.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="seat col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/seatcover/netseatcover.jfif"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#nsc" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Net Seat Cover ₱600</p>
+												</div>
+											</div>
+										</div>
+										<div class="seat col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/seatcover/nmax.jfif"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#nmaxs" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Nmax Sear Cover ₱600.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="shock col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/shocks/brembo calipers.jfif"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#bcs" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Brembo Calipers ₱600.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="shock col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/shocks/hero racing shock absorber.jfif"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#hrsa" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Hero racing shock absorber ₱600.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="shock col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/shocks/TRM reloader.jfif"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#TRM" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">TRM Reloader ₱600</p>
+												</div>
+											</div>
+										</div>
+										<div class="shock col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/shocks/TTGR shocks.jfif"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#ttgrs" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">TTGR shocks ₱600.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="shock col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/shocks/Universal shocks.jfif"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#uss" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Universal Shocks ₱600.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="accesss col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/accessories/doamianwhite.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#dw" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">doamian (white) ₱150.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="accesss col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/accessories/domian black.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#db" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">doamian (black) ₱150.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="accesss col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/accessories/domianyellow.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#dy" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">doamian (yellow) ₱150.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="accesss col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/accessories/helmetcover.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#jrph" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">JRP Helmet cover ₱150</p>
+												</div>
+											</div>
+										</div>
+										<div class="accesss col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/accessories/motor handle gripblack.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#mhgb" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">motor handle grip black ₱150.00</p>
+												</div>
+											</div>
+										</div><div class="accesss col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/accessories/motor handle grippeach.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#mhgp" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">motor handle grip peach ₱150.00</p>
+												</div>
+											</div>
+										</div><div class="accesss col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/accessories/motor handle gripwhite.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#mhgw" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">motor handle grip white₱150.00</p>
+												</div>
+											</div>
+										</div><div class="accesss col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/accessories/perfume.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#pf" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Perfume ₱150.00</p>
+												</div>
+											</div>
+										</div><div class="accesss col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/accessories/playlifeblack.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#plb" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Play Life black hand grip ₱150.00</p>
+												</div>
+											</div>
+										</div><div class="accesss col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/accessories/stickers.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#stickers" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Iggy works Stickers ₱150.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="accesss col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/accessories/stylebolts.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#SV" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Style bolts ₱150.00</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="oils col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/COG/antirusty.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#ar" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">King Sfon Anti rusty Spray Lubricant ₱150.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="oils col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/COG/carclean.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#cc" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">CARBEAN CLEANER ₱150.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="oils col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/COG/heng iguana gold bolts.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#higb" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Heng Iguana Gold Bolts ₱150.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="oils col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/COG/Koby protectant.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#kb" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Koby Original Protectant ₱150.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="oils col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/COG/kobyauto.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#ka" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Koby Auto Tire Sealer ₱150.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="oils col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/COG/mugs.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#mugs" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">mugs ₱150.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="oils col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/COG/nmax king bolts.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#nkb" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Nmax King Bolts ₱150.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="oils col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/COG/RGSbolts.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#rgsb" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">RGS BOLTS ₱150.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="oils col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/COG/RS8.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#rs8" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">RS8 FUEL SAVER ₱150.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="oils col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/COG/Superoil.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#sos" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">Speed MM8 TUNNER SUPER OIL ₱150.00</p>
+												</div>
+											</div>
+										</div>
+										<div class="oils col-lg-3 col-md-12">
+											<div class="card col-lg-12" >
+												<img src="Pictures/COG/VS1.jpg"  height="220px">
+												<div class="card-body">
+													<button class="btn btn-primary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">ORDER!</button><br>
+													<button class="btn btn-link" data-bs-target="#vs1s" data-bs-toggle="modal" data-bs-dismiss="modal">See more Info.</button>
+													<p class="name card-text">VS1 Protector ₱150.00</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+							<!-- Modal For Disk brakes -->
+							<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel">TDR Disk Brake ₱250.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/disc/discbrake.jpg"  height="220px">
+											<h3><label>Size:</label>230mm (Stock size) </h3>
+											<h3><label>Thickness: </label>3mm</h3>
+											<h2>Original and authentic</h2>
+
+											<h3>Available:</h3>
+											<h5>Front (Aerox & Nmax)</h5>
+											<h5>Rear (Aerox dual disc & Nmax)</h5>
+											<h5>● Designed for both street and track</h5>
+											<h5>● Best friction surface of stainless steel rotor</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="YADB" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel">Yamaha Aerox Disk Brake ₱1250.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/disc/yamaha_aerox.jpg"  height="220px">
+											<h3><label>Size:</label>230mm (Stock size) </h3>
+											<h3><label>Thickness: </label>2.5mm</h3>
+											<h2>Original and authentic</h2>
+
+											<h3>Available:</h3>
+											<h5>Front (Aerox)</h5>
+											<h5>Rear (Aerox dual disc )</h5>
+											<h5>● Designed for both street and track</h5>
+											<h5>● Best friction surface of stainless steel rotor</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- end modal for disk brakes -->
+							<div class="modal fade" id="YDB" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel2">Yamaha Disk Brake ₱2050.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/disc/yamaha.jpg"  height="220px">
+											<h3><label>Size:</label>150mm (Stock size) </h3>
+											<h3><label>Thickness: </label>2.6mm</h3>
+											<h2>Original and authentic</h2>
+
+											<h3>Available:</h3>
+											<h5>Front (Aerox and Nmax)</h5>
+											<h5>Rear (Aerox dual disc )</h5>
+											<h5>● Designed for both street and track</h5>
+											<h5>● Best friction surface of stainless steel rotor</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="modal fade" id="RYDB" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel3">Rotor Yamaha Disk Brake ₱2150.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/disc/rotordiscbrake yamaha.jfif"  height="220px">
+											<h3><label>Size:</label>150mm (Stock size) </h3>
+											<h3><label>Thickness: </label>2.6mm</h3>
+											<h2>Original and authentic</h2>
+
+											<h3>Available:</h3>
+											<h5>Front (Rotor Aerox and Nmax)</h5>
+											<h5>Rear (Aerox dual disc )</h5>
+											<h5>● Designed for both street and track</h5>
+											<h5>● Best friction surface of stainless steel rotor</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="modal fade" id="RDB" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel4">RGS Disk Brake ₱1250.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/disc/RGS.jfif"  height="220px">
+											<h3><label>Size:</label>150mm (Stock size) </h3>
+											<h3><label>Thickness: </label>2.6mm</h3>
+											<h2>Original and authentic</h2>
+
+											<h3>Available:</h3>
+											<h5>Front (Rotor Aerox and Nmax)</h5>
+											<h5>Rear (Aerox dual disc )</h5>
+											<h5>● Designed for both street and track</h5>
+											<h5>● Best friction surface of stainless steel rotor</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="BDB" aria-hidden="true" aria-labelledby="exampleModalToggleLabel5" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel5">Brembo Disc Brake ₱11250.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/disc/brembo.jpg"  height="220px">
+											<h3><label>Size:</label>250mm (Stock size) </h3>
+											<h3><label>Thickness: </label>2.5mm</h3>
+											<h2>Original and authentic</h2>
+
+											<h3>Available:</h3>
+											<h5>Front (Rotor Aerox and Nmax)</h5>
+											<h5>Rear (Honda dual disc )</h5>
+											<h5>● Designed for both street and track</h5>
+											<h5>● Best friction surface of stainless steel rotor</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="HDB" aria-hidden="true" aria-labelledby="exampleModalToggleLabel6" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel6">Honda Disk Brake ₱3650.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/disc/honda.jfif"  height="220px">
+											<h3><label>Size:</label>250mm (Stock size) </h3>
+											<h3><label>Thickness: </label>2.5mm</h3>
+											<h2>Original and authentic</h2>
+
+											<h3>Available:</h3>
+											<h5>Front (Rotor Aerox and Nmax)</h5>
+											<h5>Rear (Honda dual disc )</h5>
+											<h5>● Designed for both street and track</h5>
+											<h5>● Best friction surface of stainless steel rotor</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="BSBR" aria-hidden="true" aria-labelledby="exampleModalToggleLabel7" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel7">Brembo Super Brake Rotors ₱3250.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/disc/brembo_super_brake_rortors.jpg"  height="220px">
+											<h3><label>Size:</label>250mm (Stock size) </h3>
+											<h3><label>Thickness: </label>2.5mm</h3>
+											<h2>Original and authentic</h2>
+
+											<h3>Available:</h3>
+											<h5>Front (Rotor Aerox and Nmax)</h5>
+											<h5>Rear (Honda dual disc )</h5>
+											<h5>● Designed for both street and track</h5>
+											<h5>● Best friction surface of stainless steel rotor</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="motul" aria-hidden="true" aria-labelledby="exampleModalToggleLabel8" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel8">Motul ₱650.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/COG/motul.jpg"  height="220px">
+											<h2><label>Specifications of Motul Power LE 5W-40 100% Synthetic 1L + Gear Oil 80W-90 120ml</label></h2>
+											<h3><label>Brand: </label>MOTUL</h3>
+											<h3><label>Engine Oil Type: </label>Fully synthetic</h3>
+											<h3><label>Motor Type: </label>Automotive</h3>
+											<h3>SKU:</h3>
+											<h5>2439467956_PH-11125378896</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="modal fade" id="coolants" aria-hidden="true" aria-labelledby="exampleModalToggleLabel11" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel11">Power Coolants ₱550.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/COG/powercoolant.jpg"  height="220px">
+											<h2><label>Specifications of coolants Power LE 5W-40 100% Synthetic 1L + Gear Oil 80W-90 120ml</label></h2>
+											<h3><label>Brand: </label>Coolants</h3>
+											<h3><label>Engine Oil Type: </label>Fully synthetic</h3>
+											<h3><label>Motor Type: </label>Automotive</h3>
+											<h3>SKU:</h3>
+											<h5>2439467956_PH-11125378896</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="modal fade" id="JRP" aria-hidden="true" aria-labelledby="exampleModalToggleLabel9" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel9">JRP Seatcover ₱590.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/seatcover/jrp.jpg"  height="220px">
+											<h2><label>Specifications of JRP COVER SET Tahi Dry Carbon Thailand Motor Seat Cover Rubberized jrp seat cover original 【Ready Stock】</label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3><label>Model: </label>gum-elastic</h3>
+											<h3><label>Warranty Period: </label>7 Days</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="modal fade" id="jds" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1"  style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">JDS SeatCovers ₱850.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/seatcover1.jpg"  height="220px">
+											<h2><label>Specifications of JRP COVER SET Tahi Dry Carbon Thailand Motor Seat Cover Rubberized jrp seat cover original 【Ready Stock】</label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3><label>Model: </label>gum-elastic</h3>
+											<h3><label>Warranty Period: </label>7 Days</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="modal fade" id="HRS" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">Hero Rare Shock 300mm ₱1,000.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/shocks/hero rare shock 300mm.jfif"  height="220px">
+											<h2><label>Hero Rare Shock 300mm</label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+								<div class="modal fade" id="TRM" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">TRM reloader Shocks ₱1,000.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/shocks/TRM reloader.jfif"  height="220px">
+											<h2><label>TRM reloader Shocks</label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="dw" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">doamian (white) ₱150.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/accessories/doamianwhite.jpg"  height="220px">
+											<h2><label>doamian (white) ₱150.00</label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="db" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">doamian (black) ₱150.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/accessories/domian black.jpg"  height="220px">
+											<h2><label>doamian (black) ₱150.00</label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div><div class="modal fade" id="dy" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">doamian (Yellow) ₱150.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/accessories/domianyellow.jpg"  height="220px">
+											<h2><label>doamian (yellow) ₱150.00</label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div><div class="modal fade" id="jrph" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">jrp helmet cover ₱150.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/accessories/helmetcover.jpg"  height="220px">
+											<h2><label>jrp helmet cover ₱150.00</label></h2>
+											<h3><label>Brand: </label>JRP</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="mhgb" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">motor handle grip black ₱150.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/accessories/motor handle gripblack.jpg"  height="220px">
+											<h2><label>motor handle grip black ₱150.00</label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="mhgp" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">motor handle grip peach ₱150.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/accessories/motor handle grippeach.jpg"  height="220px">
+											<h2><label>motor handle grip peach ₱150.00</label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="pf" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">Perfume tangled ₱150.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/accessories/perfume.jpg"  height="220px">
+											<h2><label>Perfume tangled ₱150.00</label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="plb" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">Play life Grip black ₱150.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/accessories/playlifeblack.jpg"  height="220px">
+											<h2><label>Play life Grip black ₱150.00</label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="mhgw" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">motor handle grip white ₱150.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/accessories/motor handle gripwhite.jpg"  height="220px">
+											<h2><label>motor handle grip white₱150.00</label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="stickers" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">Iggy works Stickers ₱150.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/accessories/stickers.jpg"  height="220px">
+											<h2><label>Iggy works Stickers ₱150.00</label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="SV" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">Style Volts ₱150.00 </h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/accessories/stylebolts.jpg"  height="220px">
+											<h2><label>Style Volts ₱150.00 </label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="ar" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">King Sfon Anti rusty Spray Lubricant ₱150.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/COG/antirusty.jpg"  height="220px">
+											<h2><label>King Sfon Anti rusty Spray Lubricant ₱150.00</label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="cc" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">CARBEAN CLEANER ₱150.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/COG/carclean.jpg"  height="220px">
+											<h2><label>CARBEAN CLEANER ₱150.00</label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="higb" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">heng iguana gold bolts ₱150.00 </h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/COG/heng iguana gold bolts.jpg"  height="220px">
+											<label>heng iguana gold bolts ₱150.00 </label>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="kb" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">Koby Original Protectant ₱150.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/COG/koby protectant.jpg"  height="220px">
+											<h2><label>Koby Original Protectant ₱150.00</label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="ka" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">Koby Auto Tire Sealer ₱150.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/COG/kobyauto.jpg"  height="220px">
+											<h2><label>Koby Auto Tire Sealer ₱150.00</label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="mugs" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">Mugs ₱150.00 </h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/COG/mugs.jpg"  height="220px">
+											<h2><label>Mugs ₱150.00 </label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="nkb" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">Nmax King bolts ₱150.00 </h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/COG/nmax king bolts.jpg"  height="220px">
+											<h2><label>Nmax King bolts ₱150.00</label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="rgsb" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">RGS Volts ₱150.00 </h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/COG/RGSbolts.jpg"  height="220px">
+											<h2><label>RGS Volts ₱150.00 </label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="rs8" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">RS8 FUEL SAVER ₱150.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/COG/RS8.jpg"  height="220px">
+											<h2><label>RS8 FUEL SAVER ₱150.00 </label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="sos" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">Speed MM8 TUNNER SUPER OIL ₱150.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/COG/Superoil.jpg"  height="220px">
+											<h2><label>Speed MM8 TUNNER SUPER OIL ₱150.00</label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="vs1s" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">VS1 Protector ₱150.00 </h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/COG/VS1.jpg"  height="220px">
+											<label>VS1 Protector ₱150.00  </label>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="nsc" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">Net Seat Cover ₱150.00 </h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/seatcover/netseatcover.jfif"  height="220px">
+											<label>Net seat Cover ₱150.00  </label>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="nmaxs" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">nmax Seat Cover ₱150.00 </h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/seatcover/nmax.jfif"  height="220px">
+											<h2><label>Nmax seat Cover ₱600.00  </label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="modal fade" id="bcs" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">Brembo Calipers ₱600.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/shocks/brembo calipers.jfif"  height="220px">
+											<h2><label>Brembo Calipers ₱600.00</label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="hrsa" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">hero racing shock absorber ₱150.00 </h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/shocks/hero racing shock absorber.jfif"  height="220px">
+											<h2><label>hero racing shock absorber ₱600.00 </label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="ttgrs" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">TTGR shocks ₱600.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/shocks/TTGR shocks.jfif"  height="220px">
+											<h2><label>TTGR shocks ₱600.00</label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="uss" aria-hidden="true" aria-labelledby="exampleModalToggleLabel0" tabindex="-1" style=" z-index: 1100 !important">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel0">Universal Shocks ₱600.00</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<h2>DETAILS</h2>
+											<img src="Pictures/shocks/Universal shocks.jfif"  height="220px">
+											<h2><label>Universal Shocks ₱600.00</label></h2>
+											<h3><label>Brand: </label>No Brand</h3>
+											<h3>SKU:</h3>
+											<h5>2479639140_PH-11363497506</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<!-- end of producs modals -->
+							<div class="modal fade col-lg-12	" id="order" aria-hidden="true" aria-labelledby="exampleModalToggleLabel12" tabindex="-1" data-bs-backdrop="static" 	>
+								<div class="modal-dialog modal-dialog-centered modal-xl">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel12">Place your Order</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<div class="table-responsive"> 
+											<table id="example" class="table table-striped col-lg-12 col-md-12 col-xs-12" style="width:100%">
+												<thead>
+													<tr>
+														<th>Product name</th>
+														<th>Price</th>
+														<th>Details</th>
+														<th>Order</th>
+														<th>Quantity</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Hero Rare Shock 300mm</td>
+														<td>₱1,000.00</td>
+														<td><button class="btn btn-link" data-bs-target="#HRS" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>JDS SeatCovers </td>
+														<td>₱850.00</td>
+														<td><button class="btn btn-link" data-bs-target="#jds" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>JRP Seatcover</td>
+														<td> ₱590.00</td>
+														<td><button class="btn btn-link" data-bs-target="#JRP" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Coolants </td>
+														<td>₱550.00</td>
+														<td><button class="btn btn-link" data-bs-target="#coolants" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Motul ₱650</td>
+														<td>₱650</td>
+														<td><button class="btn btn-link" data-bs-target="#motul" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Brembo Super Brake Rotors</td>
+														<td>₱3250.00</td>
+														<td><button class="btn btn-link" data-bs-target="#BSBR" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>TDR Disk Brake</td>
+														<td>₱250</td>
+														<td><button class="btn btn-link" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Yamaha Aerox Disk Brake</td>
+														<td> ₱1250.00</td>
+														<td><button class="btn btn-link" data-bs-target="#YADB" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Yamaha Disk Brake</td>
+														<td>₱2050.00</td>
+														<td><button class="btn btn-link" data-bs-target="#YDB" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Rotor Yamaha Disk Brake</td>
+														<td>₱2150.00</td>
+														<td><button class="btn btn-link" data-bs-target="#RYDB" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>RGS Disk Brake</td>
+														<td>₱1250</td>
+														<td><button class="btn btn-link" data-bs-target="#RDB" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Brembo Disc Brake</td>
+														<td>₱11250.00</td>
+														<td><button class="btn btn-link" data-bs-target="#BDB" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Honda Disk Brake</td>
+														<td>₱3650.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#HDB" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Domian handle grip White</td>
+														<td>₱3650.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#HDB" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>JRP Seatcover</td>
+														<td>₱590</td>
+														<td><button class="btn btn-link" data-bs-target="#JRP" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Net Seat Cover</td>
+														<td>₱600.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#nsc" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Nmax Sear Cover</td>
+														<td>₱600.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#nmaxs" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Brembo Calipers</td>
+														<td>₱600.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#bcs" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Hero racing shock absorber</td>
+														<td>₱600.00</td>
+														<td><button class="btn btn-link" data-bs-target="#hrsa" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>TRM Reloader </td>
+														<td>₱600.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#TRM" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>TTGR shocks</td>
+														<td>₱600.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#ttgrs" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Universal Shocks</td>
+														<td>₱600.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#uss" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>doamian (white)</td>
+														<td>₱150.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#dw" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>doamian (black)</td>
+														<td>₱150.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#db" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>doamian (yellow)</td>
+														<td>₱150.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#dy" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>JRP Helmet cover</td>
+														<td>₱150.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#jrph" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>motor handle grip peach</td>
+														<td>₱150.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#mhgp" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>motor handle grip white</td>
+														<td>₱150.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#mhgw" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Perfume </td>
+														<td>₱150.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#pf" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Play Life black hand grip</td>
+														<td>₱150.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#plb" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Iggy works Stickers</td>
+														<td>₱150.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#stickers" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Style bolts</td>
+														<td>₱150.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#SV" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>King Sfon Anti rusty Spray Lubricant</td>
+														<td>₱150.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#ar" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>CARBEAN CLEANER</td>
+														<td>₱150.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#cc" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Heng Iguana Gold Bolts</td>
+														<td>₱150.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#higb" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Koby Original Protectant</td>
+														<td>₱150.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#kb" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Koby Auto Tire Sealer</td>
+														<td>₱150.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#ka" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>mugs</td>
+														<td>₱150.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#mugs" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Nmax King Bolts</td>
+														<td>₱150.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#nkb" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>RGS BOLTS</td>
+														<td>₱150.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#rgsb" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>RS8 FUEL SAVER  </td>
+														<td>₱150.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#rs8" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>Speed MM8 TUNNER SUPER OIL</td>
+														<td>₱150.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#sos" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>VS1 Protector</td>
+														<td>₱150.00 </td>
+														<td><button class="btn btn-link" data-bs-target="#vs1s" data-bs-toggle="modal" >See more Info.</button></td>
+														<td>
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+															</div>
+														</td>	
+														<td>
+															<div class="col-lg-3">
+																<input type="number" class="form-control" placeholder="1">
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+												</div>
+										</div>
+										<div class="modal-footer">
+											<button class="btn btn-primary" data-bs-target="#confirm" data-bs-toggle="modal" data-bs-dismiss="modal">Place Order</button>
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Cancel</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade" id="confirm" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+								<div class="modal-dialog modal-dialog-centered modal-xl">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalToggleLabel2">Fill Up the form</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<form>
+												<div class="mb-3">
+													<label for="recipient-name" class="col-form-label">Recipient:</label>
+													<input type="text" class="form-control" id="recipient-name" placeholder="Pedro S. Domingo">
+												</div>
+												<div class="mb-3">
+													<label for="Address" class="col-form-label">Address:</label>
+													<input type="text" class="form-control" id="Address" placeholder="029, 1017 Agusto Francisco, San Andres Bukid, Manila, Metro Manila">
+												</div>
+												<div class="mb-3">
+													<label for="Address" class="col-form-label">Contact Number:</label>
+													<input type="tel" class="form-control" id="Address" placeholder="099-9872-7813"pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+												</div>
+												<div class="mb-3">
+													<label for="payment" class="col-form-label">TYPE OF PAYMENT:</label>
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="choices" id="COD" checked>
+														<label class="form-check-label" for="COD">COD</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="choices" id="Checks" >
+														<label class="form-check-label" for="Checks">Checks</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="choices" id="Debit cards" >
+														<label class="form-check-label" for="Debit cards">Debit cards</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="choices" id="Credit cards" >
+														<label class="form-check-label" for="Credit cards">Credit cards</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="choices" id="Mobile payments" >
+														<label class="form-check-label" for="Mobile payments">Mobile payments</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="radio" name="choices" id="Electronic bank transfers" >
+														<label class="form-check-label" for="Electronic bank transfers">Electronic bank transfers</label>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div class="modal-footer">
+											<button class="btn btn-primary" data-bs-target="#ignismyModal" data-bs-toggle="modal" data-bs-dismiss="modal">Submit</button>
+											<button type="button" class="btn btn-secondary" data-bs-target="#order" data-bs-toggle="modal" data-bs-dismiss="modal">Cancel</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="modal fade" id="ignismyModal" role="dialog">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-body">
+											<div class="thank-you-pop col-lg-12" style="text-align: center;">
+												<img src="http://goactionstations.co.uk/wp-content/uploads/2017/03/Green-Round-Tick.png" alt="">
+												<h1>Thank You!</h1>
+												<p>Ordered had been placed</p>
+												<h3 class="cupon-pop">Your Id: <span>12345</span></h3>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-md-12 col-lg-12 col-xs-12" style="background-color:#282828;">
+								<br>
+
+								<!-- footer -->
+								<footer class="bg-dark text-center text-lg-start col-lg-12" style="background-color:#282828;">
+					<div class="container p-4">
+						<div class="places" style=" margin-left: 2rem; font-family: Bebas Neue; text-align: center; color: white;"><br><h1>Contact us in the provided button below</h1>
+							<a href="https://www.facebook.com/yuan.sacdalan" class="fa fa-facebook fa-lg" target="_blank"></a>
+							<a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKkVRkVvKgTfPCrMWVHKbnFGHsGMHFXCWQhlFmgkhCWPBClpKRVFQRhMLnSMgSgKDBFhhJF" class="fa fa-google fa-lg" target="_blank"></a>
+							<a href="https://www.instagram.com/iggyworks_/" class="fa fa-instagram fa-lg" target="_blank"></a>
+							<div class="places" style=" margin-left: 2rem; font-family: Bebas Neue; text-align: center;"><br><h2>2029, 1017 Agusto Francisco, San Andres Bukid, Manila, Metro Manila</h2>
+							</div>
+						</div>
+					</div>
+				</footer>
+							</div>
+						</div>
+					</div>
+				
+
+
+
+
+
+
+	<script type="text/javascript" src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bootstrap-5.0.2-dist/jquery/jquery.js"></script>
+	<script type="text/javascript" src="bootstrap-5.0.2-dist/jquery/popper.js"></script>
+	<script type="text/javascript" src="bootstrap-5.0.2-dist/jquery/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="bootstrap-5.0.2-dist/jquery/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="bootstrap-5.0.2-dist/js/dataTables.bootstrap5.min.js"></script>
+
+
+	<script type="text/javascript">
+
+		function brake() {
+			$(".shock").hide();
+			$(".oils").hide();
+			$(".accesss").hide();
+			$(".seat").hide();
+			$(".brake").show();
+		}
+		function shocks() {
+			$(".brake").hide();
+			$(".oils").hide();
+			$(".seat").hide();
+			$(".accesss").hide();
+			$(".shock").show();
+		}
+		function oils() {
+			$(".shock").hide();
+			$(".brake").hide();
+			$(".accesss").hide();
+			$(".seat").hide();
+			$(".oils").show();
+		}
+		function seat() {
+			$(".shock").hide();
+			$(".oils").hide();
+			$(".accesss").hide();
+			$(".seat").show();
+			$(".brake").hide();
+		}
+		function accesss() {
+			$(".shock").hide();
+			$(".oils").hide();
+			$(".brake").hide();
+			$(".seat").hide();
+			$(".accesss").show();
+		}
+		function alls(){
+			$(".shock").show();
+			$(".oils").show();
+			$(".accesss").show();
+			$(".seat").show();
+			$(".brake").show();
+		}
+
+		function searprod() {
+			let input = document.getElementById('searchbar').value
+			input=input.toLowerCase();
+			let x = document.getElementsByClassName('col-lg-3');
+			for (i = 0; i < x.length; i++) { 
+				if (x[i].innerHTML.toLowerCase().includes(input)) {
+					x[i].style.display="inline-block";
+
+				}
+				else {
+					x[i].style.display="none"; 
+
+				}
+			}
+		}
+
+
+		$(document).ready(function() {
+			$('#example').DataTable();
+		} )
+	</script>
+</body>
+</html>

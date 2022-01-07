@@ -1,0 +1,433 @@
+	<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>IGGYWORKS MOTORSHOP</title>
+</head>
+<body>
+	<div class="container-fluid	" style="background-color:#282828;">
+		<div class="row">
+			<div class="col-lg-12 col-xs-12 col-md-12">
+				<!-- LOGO -->
+				<div class="header">
+					<img src="Pictures/Iggyworkslogo.jpg" class="banner-image" width="100%">
+				</div>
+				<!-- navigaton -->
+				<nav class="navigation col-lg-12">
+					<ul class="nav">
+						<li class="a col-lg-2 col-sm-2"><a class="current "  href="index.html" style="background-color:#1c1c1c" > HOME </a></li>
+						<li class="a col-lg-2 col-sm-2"> <a class="current5 " href="aboutus.html" > ABOUT US </a></li>
+						<li class="a col-lg-2 col-sm-3"> <a class="current2"  href="product.html" > PRODUCT </a></li>
+						<li class="a col-lg-3 col-sm-3"><a class="current3 " href="services.html" > SERVICES </a></li>
+						<li class="a col-lg-3 col-sm-2"> <a class="current4 " href="contactus.html"> CONTACT US </a></li>
+						
+					</ul>
+					<!-- responsive  for mobile phones and tablets -->
+					<div class="col-lg-12" >
+						<select class="navigation col-lg-12 btn-secondary" style="width:100%" onchange="location = this.options[this.selectedIndex].value;"> 			
+							<option value="index.html">HOME</option>
+							<option value="index.html">HOME</option> 
+							<option value="product.html">PRODUCT</option>
+							<option value="services.html">SERVICES</option> 
+							<option value="contactus.html">CONTACT US</option> 
+							<option value="aboutus.html">ABOUT US</option> 	
+						</select> 
+					</div>
+				</nav>
+				<div class="row">
+						<div class=" col-lg-12" >
+							
+						</div>
+					</div>
+				<br>
+				<div class="row">
+					<div class="yes col-lg-2">
+						<!-- Product list -->
+						<div class=" prodlist" >
+							<ul class="list_prod" >
+								<li class="list">
+									<button type="button" class="btn btn-secondary col-lg-12" data-bs-toggle="modal" data-bs-target="#diskbrake">Disk Break</button>
+								</li>
+								<li class="list"><button type="button" class="btn btn-secondary col-lg-12 " data-bs-toggle="modal" data-bs-target="#shocks">Shock</button></li>
+								<li class="list"><button type="button" class="btn btn-secondary col-lg-12" data-bs-toggle="modal" data-bs-target="#seatcover">Seat Cover</button></li>
+								<li class="list"><button type="button" class="btn btn-secondary col-lg-12" data-bs-toggle="modal" data-bs-target="#GOC"> Gear, Oil, and Coolant </button></li>
+								<li class="list"><button type="button" class="btn btn-secondary col-lg-12 disabled" data-bs-toggle="" data-bs-target="" style="color:transparent;">_______</button></li>
+								<li class="list"><button type="button" class="btn btn-secondary col-lg-12 disabled" data-bs-toggle="" data-bs-target="" style="color:transparent;">_______</button></li>
+								<li class="list"><button type="button" class="btn btn-secondary col-lg-12 disabled" data-bs-toggle="" data-bs-target="" style="color:transparent;">_______</button></li>
+								<li class="list"><button type="button" class="btn btn-secondary col-lg-12 disabled" data-bs-toggle="" data-bs-target="" style="color:transparent;">_______</button></li>
+								<li class="list"><button type="button" class="btn btn-secondary col-lg-12 disabled" data-bs-toggle="" data-bs-target="" style="color:transparent;">_______</button></li>
+								<li class="list"><button type="button" class="btn btn-secondary col-lg-12 disabled" data-bs-toggle="" data-bs-target="" style="color:transparent;">_______</button></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-10 col-sm-12">
+						<!-- image of shop -->
+						<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+							<div class="carousel-indicators">
+								<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+								<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+								<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+								<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+							</div>
+							<div class="carousel-inner">
+								<div class="carousel-item active ">
+									<img src="Pictures/bestseller.gif" class="d-block w-100 shop-image " alt="..." >
+									<div class="carousel-caption d-none d-md-block">
+									</div>
+								</div>
+								<div class="carousel-item ">
+									<img src="Pictures/inside.jpg" class="d-block w-100 shop-image " alt="...">
+									<div class="carousel-caption d-none d-md-block">
+										<h5>Inside Of Shop</h5>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<img src="Pictures/outdoor2.jpg" class="d-block w-100 shop-image" alt="...">
+									<div class="carousel-caption d-none d-md-block">
+										<h5>Service area of IggyWorks</h5>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<img src="Pictures/outdoor.jpg" class="d-block w-100 shop-image" alt="...">
+									<div class="carousel-caption d-none d-md-block">
+										<h5>Outside of shop</h5>
+									</div>
+								</div>
+							</div>
+							<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<br>	
+				<!-- business motiv -->
+				<div class="row" >
+					<div class="statement col-lg-12" style="text-align: justify;color: white; ">
+						<h1 class="tagline" style="font-size: 60px;"><b><i>"We fix and Provide, For your great ride."</i></b></h1>
+					</div>
+					<br>
+					<div class="bestseller " style="height:550px ; margin-top:-185px;">
+						<div class="row">
+							<div class=" col-lg-6" >
+								<img src="Pictures/COG/motul.jpg" style="width: 100%;"  >
+							</div>
+							
+							<div class=" col-lg-6">
+								<div class="row" style="text-align: center; color:white;">
+									<i><h1 class="motul col-lg-12">MOTUL</h1>
+									<h4 class="best col-lg-12" >BEST SELLER OF THE YEAR</h4></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br>
+				</div>
+				<!-- footer -->
+				<footer class="bg-dark text-center text-lg-start col-lg-12" style="background-color:#282828;">
+					<div class="container p-4">
+						<div class="places" style=" margin-left: 2rem; font-family: Bebas Neue; text-align: center; color: white;"><br><h1>Contact us in the provided button below</h1>
+							<a href="https://www.facebook.com/yuan.sacdalan" class="fa fa-facebook fa-lg" target="_blank"></a>
+							<a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKkVRkVvKgTfPCrMWVHKbnFGHsGMHFXCWQhlFmgkhCWPBClpKRVFQRhMLnSMgSgKDBFhhJF" class="fa fa-google fa-lg" target="_blank"></a>
+							<a href="https://www.instagram.com/iggyworks_/" class="fa fa-instagram fa-lg" target="_blank"></a>
+							<div class="places" style=" margin-left: 2rem; font-family: Bebas Neue; text-align: center;"><br><h2>2029, 1017 Agusto Francisco, San Andres Bukid, Manila, Metro Manila</h2>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+
+
+
+		<!-- Modal for diskbra -->
+		<div class="modal  fade" id="diskbrake" data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-xl modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Disc Break</h5>
+						<button type="button" class="btn-close" data-bs-backdrop="static" data-bs-keyboard="false" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="container">
+							<h4>The disc is the contact surface for the generation of friction in the braking system, so it needs to be able to withstand immense pressure and heat. Due to the intense heat applied to the disc during the process, the majority are ventilated, optimising the flow of cold air during braking.</h4>
+						</div>
+						<div class="row">
+							<div class="card-group col-lg-12">
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/disc/discbrake.jpg" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">RTX Disc Break </h3>
+									</div>
+								</div>
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/disc/brembo_super_brake_rortors.jpg" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">Brembo Super Brake Rotors</h3>
+									</div>
+								</div><div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/disc/brembo.jpg" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">Brembo Disc Brake</h3>
+									</div>
+								</div>
+
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/disc/honda.jfif" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">Honda Disc Brake</h3>
+									</div>
+								</div>
+								<div class="card-group col-lg-12">
+								</div>
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/disc/RGS.jfif" height="225px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">RGS Disc Brake</h3>
+									</div>
+								</div>
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/disc/rotordiscbrake yamaha.jfif" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">Rotor Disc Brake</h3>
+									</div>
+								</div>
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/disc/yamaha.jpg" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">YAMAHA Disc Brake</h3>
+									</div>
+								</div>
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/disc/yamaha_aerox.jpg" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">yamaha aerox Disc Brake</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--end of modal for discbrake  -->
+
+		<!-- Modal for shocks -->
+		<div class="modal  fade" id="shocks" data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" aria-labelledby="Shockslabel" aria-hidden="true">
+			<div class="modal-dialog modal-xl modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="Shockslabel">Shocks</h5>
+						<button type="button" class="btn-close" data-bs-backdrop="static" data-bs-keyboard="false" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="container">
+							<h4>The rear shock provides two basic functions: Supporting the weight of the rear of the bike with a bump-softening spring, and controlling any up-and-down oscillations of the suspension by providing damping.</h4>
+						</div>
+						<div class="row">
+							<div class="card-group col-lg-12">
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/shocks/brembo calipers.jfif" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">Brembo Calipers</h3>
+									</div>
+								</div>
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/shocks/hero racing shock absorber.jfif" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">Hero Racing Shocks</h3>
+									</div>
+								</div><div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/shocks/hero rare shock 300mm.jfif" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">Herp rare Shocks 300mm</h3>
+									</div>
+								</div>
+
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/shocks/hero shock absorber.jfif" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">Hero Shocks Absorber</h3>
+									</div>
+								</div>
+								<div class="card-group col-lg-12">
+								</div>
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/shocks/Universal shocks.jfif" height="225px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">Universal Shocks</h3>
+									</div>
+								</div>
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/shocks/ttgr.jpg" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">TTGR Front Shocks</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--end of modal for shoscks  -->
+
+<!-- Modal for seatcover -->
+		<div class="modal  fade" id="seatcover" data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" aria-labelledby="seatcoverlabel" aria-hidden="true">
+			<div class="modal-dialog modal-xl modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="seatcoverlabel">Seat Cover</h5>
+						<button type="button" class="btn-close" data-bs-backdrop="static" data-bs-keyboard="false" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="container">
+							<h4>Motorcycle seat covers act as a protective layer for both your tushie and bike. After all, there is no better feeling than a comfortable ride on your bike. Seat covers come in a variety of sizes, patterns, prints, and materials. They are easy to use, maintain, clean and durable</h4>
+						</div>
+						<div class="row">
+							<div class="card-group col-lg-12">
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/seatcover/jrp.jpg" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">Brembo Calipers</h3>
+									</div>
+								</div>
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/seatcover/netseatcover.jfif" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">Hero Racing Shocks</h3>
+									</div>
+								</div><div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/seatcover/nmax.jfif" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">Herp rare Shocks 300mm</h3>
+									</div>
+								</div>
+
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/seatcover1.jpg" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">Hero Shocks Absorber</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--end of modal for seatcover  -->
+		<!-- Modal for GOC -->
+		<div class="modal  fade" id="GOC" data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" aria-labelledby="GOClabel" aria-hidden="true">
+			<div class="modal-dialog modal-xl modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="GOClabel">Gear, Oils and Coolants</h5>
+						<button type="button" class="btn-close" data-bs-backdrop="static" data-bs-keyboard="false" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="container">
+							<h4>Gears:</h4><h5>responsible for transferring torque from the engine to the transmission.</h5>
+							<h4>Oils:</h4> <h5>formulated to handle the transmission, more specifically, the wet clutches found in most bikes. </h5>
+							<h4>Coolants:</h4> <h5>A mixture of antifreeze and water, it has higher boiling and freezing points than water, can cool more effectively than air, and is much less viscous than oil, making it ideal for vehicular cooling systems.</h5>
+						</div>
+						<div class="row">
+							<div class="card-group col-lg-12">
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/COG/antirusty.jpg" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">King Sfon Anti rusty Spray Lubricant</h3>
+									</div>
+								</div>
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/COG/carclean.jpg" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">CARBEAN CLEANER </h3>
+									</div>
+								</div><div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/COG/heng iguana gold bolts.jpg" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">Heng Iguana Gold Bolts</h3>
+									</div>
+								</div>
+
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/COG/koby protectant.jpg" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">Koby Original Protectant</h3>
+									</div>
+								</div>
+								<div class="card-group col-lg-12">
+								</div>
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/COG/kobyauto.jpg" height="225px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">Koby Auto Tire Sealer</h3>
+									</div>
+								</div>
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/COG/mugs.jpg" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">mugs</h3>
+									</div>
+								</div>
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/COG/nmax king bolts.jpg" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">Nmax King Bolts</h3>
+									</div>
+								</div>
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/COG/RGSbolts.jpg" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">RGS BOLTS</h3>
+									</div>
+								</div>
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/COG/RS8.jpg" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">RS8 FUEL SAVER</h3>
+									</div>
+								</div>
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/COG/Superoil.jpg" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">Speed MM8 TUNNER SUPER OIL</h3>
+									</div>
+								</div>
+								<div class="card col-lg-3" style="width: 15rem;">
+									<img src="Pictures/COG/VS1.jpg" height="220px" class="card-img-top " alt="...">
+									<div class="card-body">
+										<h3 class="card-text">VS1 Protector</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--end of modal for GOC  -->
+		
+	</div><!-- End of container -->
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="bootstrap-5.0.2-dist/jquery/jquery.js"></script>
+<script type="text/javascript" src="bootstrap-5.0.2-dist/jquery/popper.js"></script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

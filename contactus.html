@@ -1,0 +1,127 @@
+<!--task 1:WIREFRAMES:in progress  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>IGGYWORKS MOTORSHOP</title>
+</head>
+<body>
+	<div class="container-fluid	" style="background-color:#282828;">
+		<div class="row">
+			<div class="col-lg-12 col-xs-12 col-md-12">
+				<!-- LOGO -->
+				<div class="header">
+					<img src="Pictures/Iggyworkslogo.jpg" class="banner-image">
+				</div>
+				<!-- navigaton -->
+				<div class="navigation">
+					<ul class="nav">
+						<li class="a"><a href="index.html" > HOME </a></li>
+						<li class="a"> <a href="aboutus.html"> ABOUT US </a></li>
+						<li class="a"> <a href="product.html"> PRODUCT </a></li>
+						<li class="a"><a href="services.html"> SERVICES </a></li>
+						<li class="a"> <a href="contactus.html"style="background-color:#1c1c1c"> CONTACT US </a></li>
+					</ul>
+					<!-- responsive  for mobile phones and tablets -->
+					<div class="col-lg-12" >
+						<select class="navigation col-lg-12" style="width:100%" onchange="location = this.options[this.selectedIndex].value;"> 			
+							<option value="index.html">HOME</option>
+							<option value="index.html">HOME</option> 
+							<option value="product.html">PRODUCT</option>
+							<option value="services.html">SERVICES</option> 
+							<option value="contactus.html">CONTACT US</option> 
+							<option value="aboutus.html">ABOUT US</option> 	
+						</select> 
+					</div>
+				</div>
+				<br>
+				<div class="row">
+
+					<!-- Inquaries and maps-->
+					<div class="inquaries_maps">
+						<div class="row">
+							<div class="col-lg-6"style="border: 0px solid black;">
+								<form >
+									<h1 style="text-align:center;color: white;">How May I help you?</h1>
+									<div class="form-group row">
+										<div class="col-lg-12">
+											<input type="text"  class="form-control" placeholder="Name">
+										</div>
+									</div>
+									<br>
+									<div class="form-group row">
+										<div class="col-lg-12">
+											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
+										</div>
+									</div>
+									<br>
+									<div class="form-group row">
+										<div class="col-lg-12">
+											<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Message box Inquaries"></textarea>
+										</div>
+										<div class="text-center">
+											<br>
+											<a class="btn btn-primary col-lg-5" data-bs-target="#ignismyModal" data-bs-toggle="modal" data-bs-dismiss="modal">Submit</a>
+											<div class="modal fade" id="ignismyModal" role="dialog">
+												<div class="modal-dialog">
+													<div class="modal-content">
+														<div class="modal-body" style="color: black;">
+															<div class="thank-you-pop col-lg-12" style="text-align: center;">
+																<img src="http://goactionstations.co.uk/wp-content/uploads/2017/03/Green-Round-Tick.png" alt="">
+																<h1>Thank You!</h1>
+																<p>Your Message is Sended To your email</p>
+																<h3 class="cupon-pop">Your Id: <span>12345</span></h3>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+								<br>
+							</div>
+							<div class="col-lg-6">
+								<!--Google map-->
+								<div id="map-container-google-3" class="z-depth-6-half map-container-12">
+									<div id="map-container-google-3" class="z-depth-6-half map-container-12">
+										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.36169179615!2d121.00585651484008!3d14.578454489816588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c95b57752f55%3A0x77b99f913d8848a2!2sIggyworks!5e0!3m2!1sen!2sph!4v1637907400599!5m2!1sen!2sph" width="600" height="450" style="border:0; height: 20rem; width: 100%;" allowfullscreen="" loading="lazy"></iframe>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br>
+					<br>
+					<!-- footer -->
+					<footer class="bg-dark text-center text-lg-start col-lg-12" style="background-color:#282828;">
+						<div class="container p-4">
+							<div class="places" style=" margin-left: 2rem; font-family: Bebas Neue; text-align: center; color: white;"><br><h1>Contact us in the provided button below</h1>
+								<a href="https://www.facebook.com/yuan.sacdalan" class="fa fa-facebook fa-lg" target="_blank"></a>
+								<a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKkVRkVvKgTfPCrMWVHKbnFGHsGMHFXCWQhlFmgkhCWPBClpKRVFQRhMLnSMgSgKDBFhhJF" class="fa fa-google fa-lg" target="_blank"></a>
+								<a href="https://www.instagram.com/iggyworks_/" class="fa fa-instagram fa-lg" target="_blank"></a>
+								<div class="places" style=" margin-left: 2rem; font-family: Bebas Neue; text-align: center;"><br><h2>2029, 1017 Agusto Francisco, San Andres Bukid, Manila, Metro Manila</h2>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+	<script type="text/javascript" src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bootstrap-5.0.2-dist/jquery/jquery.js"></script>
+	<script type="text/javascript" src="bootstrap-5.0.2-dist/jquery/popper.js"></script>
+</body>
+</html>
